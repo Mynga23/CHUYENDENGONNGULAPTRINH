@@ -15,11 +15,9 @@ class Human
     end
 end
 class Student < Human 
-    attr_accessor :school, :classs, :studentId, :grade1, :grade2, :grade3
+    attr_accessor :studentId, :grade1, :grade2, :grade3
 
-    def inputInfo(school, classs, studentId, grade1, grade2, grade3)
-        @school = school
-        @classs = classs
+    def inputInfo(studentId, grade1, grade2, grade3)
         @studentId = studentId.to_i
         @grade1 = grade1.to_f
         @grade2 = grade2.to_f
@@ -32,19 +30,19 @@ class Student < Human
 
     def display
         super
-        puts "- School: #{@school} - Class: #{@classs}  - StudentId: #{@studentId} - GRADE: #{avgScore()}" 
+        puts "- StudentId: #{@studentId} - GRADE: #{avgScore()}" 
     end
 end
 
 #Tạo các đối tượng Student
 svien1 = Student.new("Nga","Nu","21","150","45","123456789","Nganga@email.com", "Kinh")
-svien1.inputInfo("UTE","RUBY","191505310217","6","8","9.7")
+svien1.inputInfo("191505310217","6","8","9.7")
 
 svien2 = Student.new("MyNga","Nu","21","168","46","123456789","Mynga@email.com", "Tay")
-svien2.inputInfo("UTE","RUBY","191505310217","9","8","7")
+svien2.inputInfo("191505310217","9","8","7")
 
 svien3 = Student.new("TuongNga","Nu","21","155","47","123456789","tuongnga@email.com", "Kinh")
-svien3.inputInfo("UTE","RUBY","191505310217","8","7","8")
+svien3.inputInfo("191505310217","8","7","8")
 
 #Gán các đối tượng Student vào 1 danh sách
 studentList = []
