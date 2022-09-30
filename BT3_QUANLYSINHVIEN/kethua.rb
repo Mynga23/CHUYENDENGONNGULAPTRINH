@@ -16,7 +16,6 @@ class Human
 end
 class Student < Human 
     attr_accessor :studentId, :grade1, :grade2, :grade3
-
     def inputInfo(studentId, grade1, grade2, grade3)
         @studentId = studentId.to_i
         @grade1 = grade1.to_f
