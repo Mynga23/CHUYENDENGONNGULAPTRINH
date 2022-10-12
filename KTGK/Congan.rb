@@ -1,6 +1,6 @@
 class Congan
     attr_accessor :id_241, :hangsanxuat_241, :namsanxuat_241, :dongxe_241, :giaban_241, :bienso_241, :mauxe_241
-    def initialize(id_241, hangsanxuat_241, namsanxuat_241, dongxe_241, giaban_241, bienso_241, mauxe_241)
+    def initData(id_241, hangsanxuat_241, namsanxuat_241, dongxe_241, giaban_241, bienso_241, mauxe_241)
         @id_241 = id_241.to_i
         @Hangsanxuat_241 = hangsanxuat_241
         @namsanxuat_241 = namsanxuat_241.to_i

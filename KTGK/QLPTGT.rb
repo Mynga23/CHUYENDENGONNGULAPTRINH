@@ -7,29 +7,34 @@ class QLPTGT
         QLPTGTList << phuongtien_241
     end
     def removePT(code_241)
-        QLPTGTList.delete_if { |x| x.id == code }
+        QLPTGTList.delete_if { |x| x.id_241 == code_241 }
         display()
     end
     def searchTransport(type,keyword)
         case type
             when "Hangsanxuat"
-                $QLPTGTList.each do |val_241|
+                QLPTGTList.each do |val_241|
                     if(val_241.hangsanxuat_241 == keyword) then 
                        puts("#{val_241.display}")
                     end
                 end
             when "Mauxe"
-                $QLPTGTList.each do |val_241|
+                QLPTGTList.each do |val_241|
                     if(val_241.mauxe_241 == keyword) then 
                        puts("#{val_241.display}")
                     end
                 end
             when "bienso"
-                $QLPTGTList.each do |val_241|
+                QLPTGTList.each do |val_241|
                     if(val_241.bienso_241 == keyword) then 
                        puts("#{val_241.display}")
                     end
                 end
         end 
     end
-  
+    def display
+        QLPTGTList.each do |list|
+            puts("#{list.display}")
+        end
+    end
+end      

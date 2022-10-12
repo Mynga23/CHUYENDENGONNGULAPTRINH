@@ -29,19 +29,19 @@ def addPTMethod(ptManager)
         case choose
         when "1"
         puts "Them Oto"
-        PT = Oto.new()
-        PT.create()
-        ptManager.addPT(PT)
+        oto = Oto.new()
+        
+        ptManager.addPT(oto)
         when "2"
         puts "Add new Newspaper"
-        PT = Xemay.new()
-        PT.create()
-        ptManager.addPT(PT)
+        xemay = Xemay.new()
+        
+        ptManager.addPT(xemay)
         when "3"
         puts "Add new Journal"
-        PT = Xetai.new()
-        PT.create()
-        ptManager.addPT(PT)
+        xetai = Xetai.new()
+        
+        ptManager.addPT(xetai)
         when "4"
         system ("cls")
         break
@@ -55,7 +55,7 @@ def removePT(ptManager)
 end
     
 
-      initBasicData(ptManager)
+      
       loop do
         puts "1. Them phuong tien(Oto, Xe may, Xe tai)!"
         puts "2. Xoa phuong tien bang id"
@@ -67,8 +67,7 @@ end
         choose = gets.chop()
         case choose
         when "1"
-          puts "Add a new document!"
-          addPTMethod(ptManager)
+            initBasicData(ptManager)
         when "2"
           puts "Remove document with id!"
           removePT(ptManager)

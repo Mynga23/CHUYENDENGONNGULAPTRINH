@@ -1,7 +1,7 @@
 require './Congan'
 class Xemay < Congan
     attr_accessor :congsuat_241, :dungtichbinhxang_241
-    def initialize  (id_241, hangsanxuat_241, namsanxuat_241, dongxe_241, giaban_241, bienso_241, mauxe_241, congsuat_241, dungtichbinhxang_241)
+    def initData  (id_241, hangsanxuat_241, namsanxuat_241, dongxe_241, giaban_241, bienso_241, mauxe_241, congsuat_241, dungtichbinhxang_241)
         super(id_241, hangsanxuat_241, namsanxuat_241, dongxe_241, giaban_241, bienso_241, mauxe_241)
         @congsuat_241 = congsuat_241
         @dungtichbinhxang_241 = dungtichbinhxang_241
