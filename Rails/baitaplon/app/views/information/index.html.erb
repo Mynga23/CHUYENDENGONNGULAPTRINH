@@ -1,0 +1,57 @@
+<p style="color: green">
+  <%= notice %>
+</p>
+
+  <h1>Information</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <%# <th scope="col">id</th> %>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Twitter</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @information.each do |information| %> 
+      <tr>
+        <%# <td cope="row"> <%= information.id %></td>
+         <td cope="row"> <%= information.first_name %></td>
+        <td cope="row"> <%= information.lats_name %></td>
+         <td cope="row"> <%= information.email %></td>
+         <td cope="row"> <%= information.phone %></td>
+         <td cope="row"> <%= information.twitter %></td>
+        <td>
+          <%= link_to "Show" , information%>
+        </td>
+        <td>
+          <%= link_to "Edit" , edit_information_path(information) %>
+        </td>
+        <td>
+          <%= button_to "Delete" ,  information, method: :delete , class: "btn btn-primary" %>
+        </td>
+      </tr>
+      <%# <tr>
+        <th scope="row">2</th>
+        <td>Tuong</td>
+        <td>Nga</td>
+        <td>nga@gmail.com</td>
+        <td>123445677</td>
+        <td>aggdb.tw</td>
+          <td>
+          <%= link_to "Show" , information_index_path %> 
+        <%# </td>
+        <td>
+          <%= link_to "Edit" , edit_information_path(information) %>
+        <%# </td>
+        <td>
+          <%= link_to "Delete" , information, method: :delete
+        </td> %> 
+      <%# </tr> %>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New information" , new_information_path %>

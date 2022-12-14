@@ -1,0 +1,2 @@
+class CreateInf < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+module CreateInfsHelper
+end
